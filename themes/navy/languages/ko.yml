@@ -539,6 +539,7 @@ site:
     desktop:
       title: 데스크톱
       description: '안전한 커뮤니케이션을 돕는 <br> 데스크톱 베타 버전을 테스트 해보세요'
+      instructions: '설치 가이드라인을 <u>여기</u>에서 확인해보세요'
     download: 스테이터스
   docs:
     stripe:

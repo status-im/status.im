@@ -24,7 +24,7 @@ site:
     wallet:
       subtitle: 無國界的加密支付
       title: 安全的加密錢包
-      description: Status加密錢包能夠安全地發送、儲存和接收包含ERC20和ERC721規範的加密貨幣。只有您掌握資金的鑰匙，直覺的設計可保護您免受攻擊。
+      description: 使用Status安全地發送、儲存和接收包含ERC20和ERC721規範的加密貨幣。只有您掌握資金的鑰匙，直觀的設計可保護您免受攻擊。
     browser:
       subtitle: 掌握自己的數據
       title: 分散式Web3瀏覽器
@@ -1038,7 +1038,7 @@ site:
       button: 了解更多有關密鑰產生的資訊
     status:
       title: 'ENS與State of Us用戶名'
-      description: 'ENS是一種以太坊名稱服務，允許以自定的英文名稱，來替換以太坊地址。任何人都可以在個人資料頁面中，用 10 SNT來註冊屬於自己的statusofus.eth用戶名。 <br> <br> 需要特別注意的是，當您使用特定的錢包地址註冊ENS名稱時，該地址將會與用戶名建立關聯，進而減少了該帳戶的隱私。'
+      description: 'ENS是以太坊名稱服務的簡稱，允許以自定的英文名稱，來替換以太坊地址。任何人都可以在個人資料頁面中，用 10 SNT押金來註冊屬於自己的statusofus.eth用戶名。 <br><br> 需要特別注意的是，當您使用特定錢包地址註冊ENS名稱，該地址將與用戶名建立關聯，進而降低該帳戶的隱密性。'
       button: '註冊Status of Us專屬用戶名'
     keycard:
       title: 使用金鑰卡保護您的帳戶
