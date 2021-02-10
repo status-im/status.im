@@ -160,7 +160,7 @@ site:
       dapp-curation:
         title: "DApp Curation"
         status: "Live"
-        description: "Dap.ps provides a way for stakeholders in the network to discover DApps, as curated by other community members. It will also provide a way to navigate by category and rating, enabling users to find exactly what they are looking for. SNT will be required for curation and signaling in the directory. A deposit of SNT will be required by DApp Developers who wish to attain greater attention to their DApp."
+        description: "Dap.ps is a third party, community deployed dapp that provides a way for stakeholders in the network to discover DApps, as curated by other community members. It enables users to find what they are looking for via navigating by category and rating. SNT is required for curation and signaling in the directory. A deposit of SNT is required by DApp Developers who wish to attain greater attention to their DApp."
         link: "Browse DApps"
       voting-dapp:
         title: "Voting DApp"
