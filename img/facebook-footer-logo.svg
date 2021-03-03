@@ -1,0 +1,6 @@
+<svg width="26" height="26" class="text-black rounded w-10 h-10 bg-gray-light fill-current" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.5" class="hover:opacity-100">
+    <rect width="26" height="26" rx="2" fill="white"></rect>
+    <path style="fill: black" fill-rule="evenodd" clip-rule="evenodd" d="M14.203 14.0701H16.552L16.905 11.4371H14.203V9.74713C14.203 8.98313 14.416 8.46213 15.552 8.46213H17V6.10013C16.2988 6.031 15.5946 5.99763 14.89 6.00013C12.8 6.00013 11.37 7.22513 11.37 9.48613V11.4361H9V14.0701H11.371V20.8571H14.203V14.0701Z" />
+    </g>
+</svg>

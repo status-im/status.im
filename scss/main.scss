@@ -1,0 +1,199 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @apply font-body leading-relaxed antialiased;
+  font-size: 14px;
+
+  @media screen and (min-width: 1420px) {
+    font-size: 16px;
+  }
+}
+
+// Custom Accordion
+// Don't find the place where I can change the classes in accordion script @timhartmann
+.accordion-content.show {
+  display: block !important;
+}
+
+.custom-accordion-arrow {
+  @apply transform transition-all duration-200 rotate-180;
+}
+
+.custom-accordion-trigger.collapsed {
+  .custom-accordion-arrow {
+    @apply rotate-0;
+  }
+}
+
+// Class for Standard Content Elements
+.custom-article {
+  @apply text-lg;
+
+  @media screen and (min-width: 1420px) {
+    @apply text-xl;
+  }
+  a:not([class]) {
+    @apply text-primary-base;
+
+    &:hover {
+      @apply text-primary-700;
+    }
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display leading-tight mb-8 mt-20;
+
+    &:first-child {
+      @apply mt-0;
+    }
+
+    + p {
+      @apply mt-4;
+    }
+    br {
+      @apply hidden;
+    }
+  }
+  h1 {
+    @apply text-6xl;
+
+    @media screen and (min-width: 1199px) {
+      @apply text-7xl;
+    }
+    @media screen and (min-width: 1420px) {
+      @apply text-8xl;
+    }
+  }
+  h2 {
+    @apply text-5xl;
+
+    @media screen and (min-width: 1199px) {
+      @apply text-6xl;
+    }
+  }
+  h3 {
+    @apply text-4xl;
+
+    @media screen and (min-width: 1199px) {
+      @apply text-5xl;
+    }
+
+    @media screen and (min-width: 1499px) {
+      @apply text-6xl;
+    }
+  }
+  h4 {
+    @apply text-3xl;
+
+    @media screen and (min-width: 1199px) {
+      @apply text-4xl;
+    }
+  }
+
+  ul:not([class]) {
+    @apply list-disc ml-8 mt-12;
+
+    &:first-child {
+      @apply mt-0;
+    }
+  }
+
+  ol:not([class]) {
+    @apply list-decimal ml-8 mt-12;
+
+    &:first-child {
+      @apply mt-0;
+    }
+  }
+
+  li:not([class]) + li:not([class]) {
+    @apply mt-4;
+  }
+
+  p:not([class])+p:not([class]) {
+    @apply mt-8;
+  }
+
+  pre {
+    @apply my-8;
+  }
+
+  code {
+    @apply bg-black rounded-md py-2 px-4 text-md text-white font-special;
+  }
+
+  pre code {
+    @apply rounded-lg p-8 font-special text-lg;
+  }
+
+  pre .hljs {
+    @apply bg-black;
+  }
+}
+
+.custom-footer .collapse.show {
+  display: block !important;
+}
+
+.custom-sidebar > li > a {
+  @apply font-medium;
+}
+
+// Sub Navigation
+.li-h3 {
+  @apply ml-6;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Regular.woff2') format('woff2'),
+    url('../fonts/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+    url('../fonts/Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Vendored
+.video-wrapper {
+  width: 38vw;
+  margin: auto;
+  height: 40vh;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  .video-wrapper {
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 768px){
+  .w-screen-2{
+    width: 50vw;
+    max-width: 50vw;
+  }
+}
+
+
+// Importing Vendored Keycard SCSS
+@import 'animations';

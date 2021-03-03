@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>Status - Enable Chat By Default For Your DApp</title>
+    
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#4360DF">
+    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#4360DF">
+
+    <meta property="og:site_name" content="Status" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Status - Enable Chat By Default For Your DApp" />
+    
+    <meta property="og:url" content="https://status.im/developer_tools/enable_chat.html" />
+    
+    <meta property="og:image" content="https://status.im/img/share.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/ethstatus" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Status - Enable Chat By Default For Your DApp" />
+    
+    <meta name="twitter:url" content="https://status.im/developer_tools/enable_chat.html" />
+    
+    <meta property="twitter:image" content="https://status.im/img/share.png" />
+    <meta name="twitter:site" content="@ethstatus" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600|IBM+Plex+Sans:400,500,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    
+<link rel="stylesheet" href="/css/main.css">
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Status" type="application/atom+xml">
+</head>
+
+<body class="template-page">
+
+    <div class="main-container">
+        <header id="header" class="flex items-center relative justify-between px-8 xl:px-20 py-6 xl:py-0 js-header z-50">
+    <a href="/fr/" class="logo w-32 xl:w-48 flex-shrink-0"><img src="/img/logo.svg"></a>
+    <nav class="js-nav overflow-auto xl:overflow-visible font-display xl:ml-20">
+        <ul class="flex flex-col xl:flex-row xl:items-center text-xl xl:text-xl font-display">
+            <li class="xl:px-4 2xl:px-8 py-4 xl:py-16 md:text-lg 2xl:text-xl js-has-submenu hover:text-primary-base ">
+                <a href="#" class="trigger-submenu hover:text-primary-base text-gray-800 font-medium inline-flex items-center w-full">
+                  Features 
+                  <span class="block xl:ml-4 ml-auto"><img src="/img/icon-arrow-down-small.svg"></span>
+                </a>
+                <div class="bg-white xl:shadow xl:py-16 py-4 xl:border-t text-gray-900 border-gray-100 relative xl:absolute w-full left-0 top-1/1 invisible pointer-events-none opacity-0 transition-all duration-200 linear js-submenu xl:block hidden z-10">
+                    <div class="max-w-screen-lg mx-auto px-8 xl:px-12">
+                        <div class="grid xl:grid-cols-2 grid-cols-1 gap-24 xl:gap-48">
+                            <div class="text-right xl:block hidden">
+                                <h4 class="text-4xl font-display font-normal">Features</h4>
+                                <p class="2xl:text-2xl mt-4 font-display font-normal">Private Messenger, Crypto Wallet, <br>Web3 Browser, and more</p>
+                            </div>
+                            <div class="mt-4">
+                                <ul class="grid xl:grid-cols-2 gap-8">
+                                    <li>
+                                      <a href="/fr/private-messenger/" class="flex items-center group">
+                                        Messagerie Privée
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/account-creation/" class="flex items-center group">
+                                        Création de compte
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/secure-wallet/" class="flex items-center group">
+                                        Portefeuille Crypto sécurisé
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/keycard-integration/" class="flex items-center group">
+                                        Keycard
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/web-three-browser/" class="flex items-center group">
+                                        Navigateur Web3
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="js-has-submenu hover:text-primary-base py-4 border-t md:text-lg 2xl:text-xl border-gray-100 xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16">
+                <a href="/fr/get-involved/" class="hover:text-primary-base text-gray-800 font-medium inline-flex items-center">S'impliquer <span class="ml-4 hidden xl:block"><img src="/img/icon-arrow-down-small.svg"></a></span>
+                <div class="bg-white shadow py-16 border-t border-gray-100 absolute w-full left-0 top-1/1 invisible pointer-events-none opacity-0 transition-all duration-200 linear js-submenu z-10">
+                    <div class="max-w-screen-lg mx-auto px-8 xl:px-12">
+                        <div class="grid grid-cols-2 gap-24 xl:gap-48">
+                            <div class="text-right">
+                                <h4 class="text-4xl xl:text-4xl font-display text-gray-900">S'impliquer</h4>
+                                <p class="2xl:text-2xl text-gray-900 mt-4">Status est un projet open source <br>réalisé par des gens du monde entier.</p>
+                                <a href="/fr/get-involved/" class="group text-primary-base font-special font-semibold inline-flex items-center hover:text-primary-900 mt-12">
+                                  En Savoir Plus
+                                  <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                </a>
+                            </div>
+                            <div class="mt-4 pl-12">
+                                <ul class="flex items-center flex-wrap">
+                                    <li class="w-1/2">
+                                      <a href="/fr/docs/" class="flex items-center text-gray-900 group">
+                                        Développeurs
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li class="w-1/2">
+                                        <ul class="flex items-center">
+                                            <li class="ml-8">
+                                                <a href="https://discuss.status.im/" target="_blank" class="icon-discourse">
+                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" d="M8.06786 1.14307C3.68929 1.14307 0 4.66092 0 9.00378C0 9.14307 0.00357143 17.1431 0.00357143 17.1431L8.06786 17.1359C12.45 17.1359 16 13.4824 16 9.1395C16 4.79664 12.45 1.14307 8.06786 1.14307ZM8 13.7145C7.30714 13.7145 6.64643 13.5609 6.05714 13.2824L3.16071 14.0002L3.97857 11.3216C3.62857 10.6752 3.42857 9.93235 3.42857 9.14307C3.42857 6.61807 5.475 4.57164 8 4.57164C10.525 4.57164 12.5714 6.61807 12.5714 9.14307C12.5714 11.6681 10.525 13.7145 8 13.7145Z" fill="#090909"/> </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="ml-8">
+                                                <a href="https://join.status.im/chat/public/status" target="_blank" class="icon-status">
+                                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7.56399 7.53454C8.44481 7.62823 9.32562 7.72186 10.4085 7.66023C13.3425 7.49313 15.1198 5.95469 14.9937 3.6551C14.8652 1.31539 12.5007 -0.126087 10.1349 0.00869768C6.27942 0.228154 3.44428 3.68621 3.12497 7.6386C3.64857 7.51329 4.19968 7.43847 4.71939 7.4089C5.80237 7.34727 6.68318 7.4409 7.56399 7.53454ZM0.00597997 12.6495C0.12764 14.7943 2.3677 16.1156 4.60907 15.992C8.26156 15.7908 10.9476 12.6209 11.25 8.9979C10.754 9.11278 10.2319 9.18145 9.73953 9.20852C8.71356 9.26504 7.87904 9.17921 7.04453 9.09332C6.21007 9.0075 5.37556 8.92167 4.34965 8.97819C1.57021 9.13134 -0.113675 10.5415 0.00597997 12.6495Z" fill="#090909"/> </svg>
+                                                </a>
+                                            </li>
+                                            <li class="ml-8">
+                                                <a href="https://discord.gg/3Exux7Y" class="icon-status" target="_blank">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false"    width="18px" height="18px"    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273l-1.47-1.338l-1.604-1.398l.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537c-1.336-.668-2.54-1.002-3.744-1.137c-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735c-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02c0 0 1 1.74 3.743 1.806c0 0 .4-.533.805-1.002c-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03c.33.136.66.27.93.4a8.18 8.18 0 0 0 1.8.536c.93.135 1.996.2 3.21 0c.6-.135 1.2-.267 1.8-.535c.39-.2.87-.4 1.397-.737c0 0-.6.936-2.205 1.404c.33.466.795 1 .795 1c2.744-.06 3.81-1.8 3.87-1.726c0-3.87-1.815-7.02-1.815-7.02c-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335c0 .74-.57 1.34-1.27 1.34c-.7 0-1.27-.6-1.27-1.334c.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335c0 .74-.57 1.34-1.27 1.34c-.7 0-1.27-.6-1.27-1.334c0-.74.57-1.338 1.27-1.338z" 
+                                                        fill="#090909" />
+                                                        <rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                                                </a>
+                                            </li>                                            
+                                            <li class="ml-8">
+                                                <a href="https://www.facebook.com/ethstatus" class="icon-facebook" target="_blank">
+                                                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M5.203 8.07013H7.552L7.905 5.43713H5.203V3.74713C5.203 2.98313 5.416 2.46213 6.552 2.46213H8V0.100131C7.29882 0.0310031 6.59457 -0.00237344 5.89 0.000131122C3.8 0.000131122 2.37 1.22513 2.37 3.48613V5.43613H0V8.07013H2.371V14.8571H5.203V8.07013Z" fill="#090909"/> </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="ml-8">
+                                                <a href="https://twitter.com/ethstatus" class="icon-twitter" target="_blank">
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M13.232 2.056C13.8854 1.63145 14.3656 0.987398 14.586 0.24C13.987 0.62 13.325 0.89 12.631 1.036C12.0671 0.382464 11.2482 0.00470955 10.385 0C8.685 0 7.307 1.469 7.307 3.282C7.307 3.533 7.334 3.784 7.388 4.029C4.83 3.893 2.562 2.587 1.044 0.601C0.768819 1.10728 0.625742 1.67477 0.628 2.251C0.628 3.389 1.17 4.394 1.996 4.982C1.50422 4.96489 1.02473 4.82386 0.602 4.572V4.613C0.602 6.203 1.664 7.53 3.072 7.831C2.62003 7.96171 2.14316 7.98126 1.682 7.888C2.073 9.192 3.21 10.14 4.557 10.167C3.2938 11.2353 1.64202 11.7279 0 11.526C1.38681 12.4836 3.03169 12.9976 4.717 13C10.377 13 13.473 8 13.473 3.662C13.473 3.52 13.47 3.378 13.464 3.238C14.0725 2.76702 14.5926 2.19176 15 1.539C14.4416 1.80337 13.8449 1.97785 13.232 2.056Z" fill="#090909"/> </svg>
+                                                </a>
+                                            </li>
+                                            <li class="ml-8">
+                                                <a href="https://www.reddit.com/r/statusim" class="icon-reddit" target="_blank">
+                                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" d="M17.9998 8.2212C17.9859 7.836 17.8622 7.4631 17.6438 7.1474C17.4253 6.8318 17.1214 6.5868 16.7686 6.4422C16.4158 6.2975 16.0292 6.2593 15.6554 6.3321C15.2817 6.405 14.9367 6.5857 14.6621 6.8527C13.1249 5.7944 11.3179 5.2097 9.4596 5.1693L10.338 0.899432L13.2297 1.51528C13.2641 1.83891 13.4113 2.13955 13.6448 2.36321C13.8783 2.58688 14.1829 2.71892 14.5038 2.73565C14.8248 2.75237 15.1412 2.65268 15.3961 2.45447C15.651 2.25626 15.8279 1.9725 15.8949 1.65414C15.9619 1.33579 15.9146 1.00367 15.7616 0.717412C15.6086 0.431152 15.3599 0.209492 15.0601 0.0922216C14.7603 -0.0250384 14.429 -0.0302383 14.1257 0.0775717C13.8225 0.185382 13.5671 0.399132 13.4054 0.680452L10.0947 0.00985175C10.0406 -0.00217825 9.9846 -0.00319806 9.9301 0.00683194C9.8755 0.0168719 9.8235 0.0377715 9.777 0.0683215C9.7305 0.0988715 9.6904 0.138472 9.6592 0.184822C9.6279 0.231162 9.606 0.283341 9.5948 0.338311L8.5948 5.0872C6.7137 5.1159 4.88184 5.7011 3.32479 6.7706C3.11648 6.5721 2.86805 6.4218 2.5967 6.3302C2.32535 6.2386 2.03758 6.2079 1.75333 6.2401C1.46908 6.2723 1.19515 6.3668 0.950529 6.5169C0.705899 6.667 0.496428 6.8692 0.336628 7.1094C0.176828 7.3497 0.0705187 7.6223 0.0250687 7.9083C-0.0203813 8.1943 -0.00389148 8.4869 0.0734085 8.7658C0.150709 9.0447 0.286959 9.3032 0.472729 9.5235C0.658489 9.7438 0.889328 9.9205 1.14923 10.0415C1.13402 10.2419 1.13402 10.4432 1.14923 10.6436C1.14923 13.7092 4.67608 16.2 9.0272 16.2C13.3784 16.2 16.9052 13.7092 16.9052 10.6436C16.9204 10.4432 16.9204 10.2419 16.9052 10.0415C17.2387 9.8736 17.5184 9.6136 17.7121 9.2915C17.9058 8.9694 18.0055 8.5983 17.9998 8.2212ZM4.4869 9.5898C4.4869 9.3191 4.56615 9.0545 4.71463 8.8295C4.86311 8.6044 5.07416 8.429 5.32107 8.3254C5.56799 8.2218 5.83968 8.1947 6.1018 8.2475C6.3639 8.3003 6.6047 8.4307 6.7937 8.6221C6.9827 8.8135 7.1114 9.0573 7.1635 9.3228C7.2156 9.5883 7.1889 9.8635 7.0866 10.1136C6.9843 10.3636 6.8111 10.5774 6.5889 10.7277C6.3667 10.8781 6.1054 10.9584 5.83819 10.9584C5.66073 10.9584 5.48502 10.923 5.32107 10.8542C5.15713 10.7854 5.00816 10.6846 4.88268 10.5575C4.7572 10.4305 4.65767 10.2796 4.58976 10.1136C4.52185 9.9475 4.4869 9.7695 4.4869 9.5898ZM12.3379 13.3534C11.3792 14.0851 10.1996 14.4575 9.0002 14.4072C7.8008 14.4575 6.6212 14.0851 5.66252 13.3534C5.60506 13.2825 5.57569 13.1925 5.58013 13.1008C5.58458 13.0092 5.62251 12.9225 5.68656 12.8577C5.7506 12.7928 5.83618 12.7544 5.92665 12.7499C6.0171 12.7454 6.106 12.7751 6.176 12.8333C6.9884 13.4369 7.9801 13.7411 8.9867 13.6955C9.9945 13.751 10.9908 13.4565 11.8109 12.8607C11.8826 12.7899 11.9791 12.7509 12.0792 12.7522C12.1287 12.7528 12.1777 12.7633 12.2232 12.7831C12.2688 12.8029 12.31 12.8316 12.3446 12.8675C12.3792 12.9035 12.4065 12.946 12.4249 12.9926C12.4433 13.0392 12.4524 13.0891 12.4518 13.1393C12.4512 13.1894 12.4408 13.239 12.4212 13.2852C12.4017 13.3313 12.3734 13.3731 12.3379 13.4081V13.3534ZM12.0946 11.0131C11.8274 11.0131 11.5661 10.9329 11.3439 10.7825C11.1217 10.6321 10.9485 10.4184 10.8462 10.1683C10.7439 9.9182 10.7172 9.643 10.7693 9.3776C10.8215 9.1121 10.9502 8.8682 11.1391 8.6768C11.3281 8.4854 11.5689 8.3551 11.831 8.3023C12.0931 8.2495 12.3648 8.2766 12.6118 8.3802C12.8587 8.4837 13.0697 8.6592 13.2182 8.8842C13.3667 9.1093 13.4459 9.3739 13.4459 9.6446C13.4533 9.83 13.4233 10.015 13.3578 10.1883C13.2924 10.3617 13.1928 10.5197 13.0651 10.6528C12.9375 10.786 12.7844 10.8914 12.6152 10.9628C12.4461 11.0341 12.2644 11.0699 12.0811 11.0679L12.0946 11.0131Z" fill="black"/> </svg>                                               
+                                                </a>
+                                            </li>
+                                            <li class="ml-8">
+                                                <a href="https://www.youtube.com/statusim" class="icon-youtube" target="_blank">
+                                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7.142 8.665L7.141 3.608L12.005 6.145L7.142 8.665ZM17.82 2.731C17.82 2.731 17.644 1.491 17.105 0.945C16.42 0.228 15.653 0.225 15.301 0.182C12.782 0 9.004 0 9.004 0H8.996C8.996 0 5.218 0 2.699 0.182C2.347 0.224 1.58 0.228 0.895 0.945C0.355 1.491 0.18 2.731 0.18 2.731C0.18 2.731 0 4.189 0 5.645V7.009C0 8.466 0.18 9.922 0.18 9.922C0.18 9.922 0.356 11.162 0.895 11.709C1.58 12.426 2.479 12.403 2.88 12.479C4.32 12.617 9 12.659 9 12.659C9 12.659 12.782 12.654 15.301 12.472C15.653 12.43 16.421 12.426 17.105 11.709C17.645 11.163 17.82 9.922 17.82 9.922C17.82 9.922 18 8.466 18 7.009V5.644C18 4.187 17.82 2.73 17.82 2.73V2.731Z" fill="#090909"/> </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mt-8 w-1/2">
+                                      <a href="/fr/get-involved/educators/" class="flex items-center text-gray-900 group">
+                                        Éducateurs
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li class="w-1/2"></li>
+                                    <li class="mt-8 w-1/2">
+                                      <a href="/fr/get-involved/community-groups/" class="flex items-center text-gray-900 group">
+                                        Groupes communautaires
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li class="w-1/2"></li>
+                                    <li class="mt-8 w-1/2">
+                                      <a href="/fr/our_team/open_positions.html" class="flex items-center text-gray-900 group">
+                                        Open Positions
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="hover:text-primary-base py-4 border-t border-gray-100 md:text-lg 2xl:text-xl xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16 "><a href="/fr/security/" class="hover:text-primary-base text-gray-800 font-medium inline-flex items-center">Sécurité</a></li>
+            <li class="hover:text-primary-base py-4 border-t border-gray-100 md:text-lg 2xl:text-xl xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16 "><a href="/fr/snt-utility/" class="hover:text-primary-base text-gray-800 font-medium inline-flex items-center">Utilité SNT</a></li>
+            <li class="hover:text-primary-base py-4 border-t border-gray-100 md:text-lg 2xl:text-xl xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16 js-has-submenu " class="hover:text-primary-base text-gray-800 font-medium inline-flex items-center">
+                <a href="/fr/docs/" class="hover:text-primary-base text-gray-800 font-medium inline-flex items-center">
+                  Développeurs 
+                  <span class="hidden xl:block ml-4"><img src="/img/icon-arrow-down-small.svg"></span>
+                </a>
+                <div class="bg-white shadow py-16 border-t border-gray-100 absolute w-full left-0 top-1/1 invisible pointer-events-none opacity-0 transition-all duration-200 linear js-submenu z-10">
+                    <div class="max-w-screen-xl mx-auto px-8 lg:px-12">
+                        <div class="grid grid-cols-2 gap-24 xl:gap-48">
+                            <div class="text-right">
+                                <h4 class="text-2xl xl:text-4xl font-display text-gray-900">Développeurs</h4>
+                                <p class="2xl:text-2xl mt-4 text-gray-900">Tout ce dont vous avez besoin pour commencer à <br>développer avec Status</p>
+                                <a href="/fr/docs/" class="group font-special font-semibold text-primary-base hover:text-primary-900 inline-flex items-center mt-8">
+                                  Tout lire
+                                  <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <ul class="grid grid-cols-2 gap-8">
+                                    <li>
+                                      <a href="/fr/technical/" class="inline-flex items-center text-gray-900 group">
+                                        Guide du contributeur
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/developer_tools/" class="inline-flex items-center text-gray-900 group">
+                                        Intégration de la DApp
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/fr/user_guides/" class="inline-flex items-center text-gray-900 group">
+                                        User Guides
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="https://tutorials.statusnetwork.com/" target="_blank" rel="noopener" class="inline-flex items-center text-gray-900 group">
+                                        Tutoriels
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="https://specs.status.im/" target="_blank" rel="noopener" class="inline-flex items-center text-gray-900 group">
+                                        Spécifications
+                                        <span class="ml-4 group-hover:translate-x-1 transform transition-all duration-200 linear"><img src="/img/icon-arrow-right.svg"></span>
+                                      </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="hover:text-primary-base py-4 border-t border-gray-100 md:text-lg 2xl:text-xl xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16 "><a href="/fr/about/" class="text-gray-800 hover:text-primary-base font-medium inline-flex items-center">A propos</a></li>
+            <li class="hover:text-primary-base py-4 border-t border-gray-100 md:text-lg 2xl:text-xl xl:border-t-0 xl:px-4 2xl:px-8 xl:py-16"><a href="https://our.status.im" target="_blank" rel="noopener" class="text-gray-800 hover:text-primary-base font-medium inline-flex items-center">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="flex flex-col xl:flex-row xl:items-center language-option js-btns">
+        <a href="https://github.com/status-im/" target="_blank" class="hidden xl:block order-1 md:order-none">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.2793C-0.000298842 16.1348 3.02955 20.4456 7.52152 21.9808C8.07188 22.0837 8.27249 21.7358 8.27249 21.4367C8.27249 21.1688 8.26325 20.4596 8.25797 19.5189C5.19868 20.1997 4.5533 18.0072 4.5533 18.0072C4.05178 16.7038 3.33117 16.356 3.33117 16.356C2.33208 15.6576 3.4064 15.6712 3.4064 15.6712C4.51107 15.751 5.09178 16.8338 5.09178 16.8338C6.07239 18.5567 7.66538 18.0586 8.29229 17.7703C8.39259 17.0422 8.67635 16.5455 8.99178 16.2626C6.54883 15.9784 3.98051 15.0107 3.98051 10.6893C3.98051 9.45765 4.40944 8.45071 5.11289 7.66302C4.99939 7.37745 4.62193 6.22976 5.22112 4.67739C5.22112 4.67739 6.14498 4.37422 8.24477 5.83456C9.1425 5.5836 10.0687 5.45572 10.9992 5.45425C11.9292 5.45552 12.8549 5.58295 13.7523 5.8332C15.8508 4.37422 16.7746 4.67739 16.7746 4.67739C17.3738 6.22976 16.9963 7.37745 16.8828 7.66302C17.5889 8.45071 18.0139 9.45765 18.0139 10.6893C18.0139 15.0215 15.4416 15.9757 12.9921 16.2545C13.3867 16.6023 13.7391 17.2912 13.7391 18.3428C13.7391 19.8505 13.7259 21.0673 13.7259 21.4367C13.7259 21.7385 13.9239 22.0891 14.4808 21.9795C19.8103 20.1557 22.9429 14.5062 21.7459 8.877C20.5489 3.24775 15.4072 -0.551533 9.82107 0.065584C4.23498 0.682701 0.000354915 5.51783 0 11.2793H0Z" fill="#4360DF"/>
+            </svg>
+        </a>
+        <a href="/fr/get/" class="order-2 flex justify-between md:order-none border transition-all duration-200 linear border-primary-base hover:bg-primary-900 hover:text-white hover:border-primary-base transition-all linear rounded py-4 px-5 inline-flex bg-blue-base text-white mt-8 xl:mt-0 font-special font-bold md:text-lg 2xl:text-xl xl:ml-8" style="min-width: 170px;">
+          Obtenir Status
+          <span class="pr-4 group-hover:translate-x-1 transform transition-all my-auto duration-200 linear"><img src="/img/icon-arrow-right-white.svg"></span>
+        </a>
+        <div class="order-3 md:order-none">
+      <div class="js-language-selector xl:pl-8 xl:relative">
+        <a href="#" class="js-language-selector-trigger transition-all duration-200 linear capitalize mt-8 xl:mt-0 text-left md:text-lg 2xl:text-xl font-special font-bold flex w-full xl:inline-flex items-center border border-gray-100 hover:bg-black hover:text-white py-4 px-5 rounded">
+          fr
+          <svg width="9" height="5" viewBox="0 0 9 5" class="ml-4 fill-current" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 3.001L0 0V2L4 5.001L8.001 2V0L4 3.001Z" />
+          </svg>
+        </a>
+        <ul class="js-language-selector-list overflow-y-auto w-11/12 xl:w-48 absolute bg-white shadow flex flex-col left-0 right-0 mb-4 m-auto top-0 xl:top-auto xl:ml-8 rounded text-left opacity-0 pointer-events-none invisible scale-95 transition-all duration-200 linear" style="height:540px;">
+          <li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/developer_tools/enable_chat.html">English</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/es/developer_tools/enable_chat.html">Español (Latina)</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/pt/developer_tools/enable_chat.html">Português</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/zh/developer_tools/enable_chat.html">简体中文</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/cn/developer_tools/enable_chat.html">繁體中文</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/ko/developer_tools/enable_chat.html">한국어</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/ja/developer_tools/enable_chat.html">日本語</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/ru/developer_tools/enable_chat.html">Русский</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/de/developer_tools/enable_chat.html">Deutsch</a></li><li class="text-primary-base bg-primary-100"><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/fr/developer_tools/enable_chat.html">Français</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/it/developer_tools/enable_chat.html">Italiano</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/tl/developer_tools/enable_chat.html">Tagalog</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/ms/developer_tools/enable_chat.html">Melayu</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/id/developer_tools/enable_chat.html">Bahasa Indonesia</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/ar/developer_tools/enable_chat.html">العربية</a></li><li class=""><a class="p-4 font-special font-semibold block border-t border-gray-100 hover:text-primary-base" href="/el/developer_tools/enable_chat.html">ελληνικά</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <a href="#" class="xl:hidden js-mobile-nav-trigger">
+        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="xl:hidden"> <rect width="22" height="1" rx="0.5" fill="#090909"/> <rect y="7" width="22" height="1" rx="0.5" fill="#090909"/> </svg>
+        <a href="/fr/get/" class="flex absolute xl:hidden border transition-all duration-200 linear border-primary-base hover:bg-primary-900 hover:text-white hover:border-primary-base transition-all linear rounded py-4 px-5 inline-flex bg-blue-base text-white font-special font-bold md:text-lg 2xl:text-xl" style="right: 65px; min-width: 130px; width: fit-content;">
+          Obtenir Status
+          <span class="ml-4 group-hover:translate-x-1 transform transition-all my-auto duration-200 linear"><img src="/img/icon-arrow-right-white.svg"></span>
+        </a>
+    </a>
+    <div class="js-mobile-nav fixed xl:hidden xl:p-0 z-40 w-full top-0 left-0 transform mt-8 scale-95 p-8 pointer-events-none opacity-0 xl:static xl:transform-none invisible transition-all duration-200 linear">
+        <div class="bg-white relative rounded shadow-lg p-8 xl:p-0 xl:hidden xl:bg-transparent xl:shadow-none">
+            <div class="overflow-auto xl:overflow-visible js-mobile-nav-inner">
+                <div class="flex items-center justify-between mb-8">
+                    <a href="/fr/" class="w-32 logo"><img src="/img/logo.svg"></a>
+                    <a href="#" class="js-mobile-nav-trigger-close">
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.5752" y="0.368273" width="22" height="1" rx="0.5" transform="rotate(45 1.5752 0.368273)" fill="#090909"/> <rect x="0.868164" y="15.9246" width="22" height="1" rx="0.5" transform="rotate(-45 0.868164 15.9246)" fill="#090909"/> </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="js-backdrop bg-black bg-opacity-25 h-screen fixed w-screen top-0 left-0 z-10 pointer-events-none invisible opacity-0 transition-all duration-200 linear"></div>
+</header>
+        <!-- The main content area -->
+<main id="main" role="main">
+
+	<section class="bg-black text-white px-8 py-8 lg:px-20 flex items-center justify-between">
+	  <p class="text-gray-200">Status Docs</p>
+	  <form id="search-form" class="flex items-center relative">
+      <span class="text-gray-500 mr-6">
+        <img src="/img/search.svg">
+      </span>
+	    <input type="text" name="userSearch" id="search-input" placeholder="Search documentation..." class="bg-transparent placeholder-gray-400 text-lg">
+	    <div id="search-results" class="absolute top-0 bg-white px-4 mt-12 shadow-lg rounded z-10"></div>
+	  </form>
+	</section>
+
+	<section class="single-docs-content mt-24 mb-40">
+		<div class="mx-auto px-8 lg:px-20">
+		  <div class="grid grid-cols-12 gap-12">
+		    <div class="col-span-12 md:col-span-3 xl:col-span-2">
+		      <aside role="navigation" class="js-sidebar">
+  <a href="#" class="md:hidden font-special font-semibold px-6 py-4 rounded block border border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-200 linear js-sidebar-mobile-trigger">Docs categories</a>
+  <div class="fixed md:p-0 z-40 md:ml-0 w-full top-0 left-0 transform mt-8 scale-95 p-8 pointer-events-none opacity-0 md:visible md:opacity-100 md:pointer-events-auto md:static md:transform-none invisible js-sidebar-inner transition-all duration-200 linear">
+    <div class="bg-white rounded shadow-lg p-8 md:p-0 overflow-auto md:bg-transparent md:shadow-none">
+      <div class="flex items-center justify-between mb-12 md:hidden">
+        <a href="/fr/" class="w-32 logo"><img src="/img/logo.svg"></a>
+        <a href="#" class="js-mobile-sidebar-trigger-close">
+          <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.5752" y="0.368273" width="22" height="1" rx="0.5" transform="rotate(45 1.5752 0.368273)" fill="#090909"></rect> <rect x="0.868164" y="15.9246" width="22" height="1" rx="0.5" transform="rotate(-45 0.868164 15.9246)" fill="#090909"></rect> </svg>
+        </a>
+      </div>
+      
+    <ul class="custom-sidebar">
+      
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/">Contributor Guide</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/FAQs.html">Technical FAQs</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/contributor_workflow.html">Contributor Workflow</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/run_status_node.html">Running A Status Node</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/org_github_labels.html">Github Labels</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/pfs.html">Perfect Forward Security</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/build_status">Build Status</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/build_status/status_go.html">Build Status-Go</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/technical/build_status/status_react_quickstart.html">Status-React Quick Start</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-primary-base" href="/fr/developer_tools">DApp Integration Center</a>
+        
+        <ul class = "text-lg pl-8 mt-4 ">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/why_status.html">Why Status</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/run_on_status/">Run on Status</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/run_on_status/mobile_dev_tools.html">Mobile Developer Tools</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/run_on_status/dapp_store_requirements.html">DApp Store Requirements</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/run_on_status/eip-1102.html">Implement EIP-1102</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/run_on_status/assets_guidelines.html">Asset Guidelines</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/status_extras/">Status DApp API</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/status_extras/status_dapp_api.html">Whisper &amp; QR Codes</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/register_dapps/">Curated DApp Store</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/developer_tools/register_dapps/register_dapps.html">Register DApps</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/user_guides/">User Guides</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/user_guides/pairing_devices.html">Pairing Devices</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/user_guides/best_security_practices.html">Security Best Practices</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/user_guides/desktop_beta_install.html">Desktop Beta Installation</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/audits/">Audits</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team">Join the team</a>
+        
+        <ul class = "text-lg pl-8 mt-4 hidden">
+          
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/faqs.html">FAQs</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/our_principles.html">Our Principles</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/open_positions.html">Open Positions</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/applying_to_status.html">Applying</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/applicant_privacy.html">Applicant Privacy</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/perks_benefits.html">Perks & Benefits</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/life_status.html">Life At Status</a>
+        
+      </li>
+
+      <li class="py-4 xl:mb-6 border-t border-gray-100 xl:border-t-0 xl:py-0">
+        <a class="text-gray-900 hover:text-primary-base" href="/fr/our_team/the_future.html">The Future</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+    </ul>
+    
+    </div>
+  </div>
+  <div class="js-backdrop bg-black bg-opacity-25 h-screen fixed w-screen top-0 left-0 z-10 pointer-events-none invisible opacity-0 transition-all duration-200 linear"></div>
+</aside>
+		    </div>
+		    <div class="col-span-12 md:col-span-7 xl:col-span-8">
+  				<div class="custom-article js-editor-content">
+  					<h1 id="Conversation-as-a-Means-of-Sustainable-Community-Building" class="article-heading"><a href="#Conversation-as-a-Means-of-Sustainable-Community-Building" class="headerlink" title="Conversation as a Means of Sustainable Community-Building"></a>Conversation as a Means of Sustainable Community-Building<a class="article-anchor" href="#Conversation-as-a-Means-of-Sustainable-Community-Building" aria-hidden="true"></a></h1><p>At Status, we really care about building a better web and this starts with a deep understanding of <a href="https://www.youtube.com/watch?v=72nfrhXroo8" target="_blank" rel="noopener">“The Web That Wasn’t”</a> and all the great ideas that we seem to have lost along the way, most often in the name of convenience or simply because they were at odds with corporate or shareholder or state interests.</p>
+<p>Some of the most interesting ideas include Vannevar Bush’s notion of the Memex, where the trail each user traced through the various documents they pulled up and compared actually became a part of the “social space” of those documents. This meant we could achieve both top-down, hierarchical classification of knowledge in tandem with grass-roots, bottom up organization defined by actual use.</p>
+<p>This notion of conversational or social space was picked up by people like Doug Engelbart (particularly in reference to his work on Knowledge Repositories) and Ted Nelson (the father of hypertext, Xanadu, and many other mad and wonderful things). For visionaries like these, computers were not solipsistic devices, they were a means to more connection, a method of encouraging collaboration at scales never before possible such that we could solve the increasingly complex problems facing modern society.</p>
+<p>At Status, we want to play a small part in bringing back some of these ideas and building a web that really is more distributed, more accessible, and <strong>more humane</strong>. This is why, in every DApp you open in Status, you’ll find a little chat icon in the bottom right, which will open a chat using a whisper topic that is generated from the DApps name.</p>
+<p><img src="./img/ck_chat.png" alt="CryptoKitties Chat"></p>
+<p>Want to find the CryptoKitties community so you can trade some new cats you’ve bred with your peers, directly though chat. Just join the #cryptokitties chat on Whisper, through Status. Want to find out more about Gitcoin, how to find and solve bounties and generally plug into the awesome group of developers they have? just join the #gitcoin chat.</p>
+<p>We really are excited about being able to bake in these kind of conversational, community spaces as an inherent part of the architecture we are building for a better web. Join us in making connection easier and celebrating what is best and most human about the work we are all involved with.</p>
+<h1 id="Add-Your-DApp-Chat-to-Our-Default-Public-Channels" class="article-heading"><a href="#Add-Your-DApp-Chat-to-Our-Default-Public-Channels" class="headerlink" title="Add Your DApp Chat to Our Default Public Channels"></a>Add Your DApp Chat to Our Default Public Channels<a class="article-anchor" href="#Add-Your-DApp-Chat-to-Our-Default-Public-Channels" aria-hidden="true"></a></h1><p>You’ll find a list of default chats if you navigate to <code>Join a Chat</code> from the homescreen of Status. If you’re as excited as we are about this notion of conversational spaces, then consider adding your DApp chat (which is simply an open topic on Whisper) to the default list so that new people see it immediately when downloading Status and figuring out which chats to join and take part in.</p>
+<p>All you need to is simply <a href="https://github.com/status-im/status-react/blob/develop/resources/default_public_chats.json" target="_blank" rel="noopener">edit this JSON file</a> and add the name of your chat. It really is as easy as that…</p>
+
+  				</div>
+  				<div class="mt-32 border-t border-gray-200 pt-8 text-gray-500 text-center text-lg font-special">
+  					Last update: 2021-03-03
+  					
+  				</div>
+				</div>
+				<div class="hidden md:block col-span-12 md:col-span-2 xl:col-span-2">
+					<div class="js-right-sub-navigation">
+						<p class="text-xl font-semibold">On this page</p>
+						<ul class="mt-8"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+        <footer class="js-footer custom-footer bg-black pt-12 pb-48 text-white ">
+    <div class="max-w-screen-2xl mx-auto px-8 lg:px-20 mt-12">
+        <div class="flex flex-col lg:flex-row lg:justify-between">
+            <h3 class="font-display font-normal text-4xl xl:text-5xl 2xl:text-6xl">Prêt à démarrer <br> avec Status ?</h3>
+            <div class="lg:flex lg:items-center">
+                <div class="flex items-center mt-8 lg:mt-0">
+                    <a href="https://apps.apple.com/us/app/status-private-communication/id1178893006" target="_blank" rel="noopener" id="official:ios" class="mr-16 app-download"><img src="/img/app-store.svg"></a>
+                    <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" target="_blank" rel="noopener" id="official:apk" class="mr-16 app-download"><img src="/img/google-play.svg"></a>
+                    <a href="https://status-im-files.ams3.cdn.digitaloceanspaces.com/StatusIm-Mobile-v1.11.1.apk" target="_blank" rel="noopener" id="official:apk" class="mr-16 app-download"><img src="/img/apk.svg"></a>
+                </div>
+                <a href="/fr/get-involved/" class="mt-8 py-3 px-4 border flex items-center justify-between lg:mt-0 border-white hover:bg-white hover:text-black rounded font-special font-medium">
+                  S'impliquer
+                  <span class="ml-20"><img src="/img/icon-arrow-right.svg"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-screen-2xl mx-auto px-8 lg:px-20 mt-24 xl:mt-40 navigation">
+        <div class="grid md:grid-cols-4 md:gap-12">
+            <div class="border-t border-gray-800 py-8 lg:pb-0 lg:pt-12">
+                
+                <h5 class="uppercase font-special tracking-widest text-lg text-gray-600">
+                  <a data-toggle="collapse" class="js-collapse-trigger custom-accordion-trigger flex items-center justify-between" href="#footer-nav-1" role="button" aria-expanded="true" aria-controls="footer-nav-1">
+                    Produit
+                    <span class="custom-accordion-arrow transform transition-all -rotate-90 duration-200 linear lg:hidden ml-4 text-gray-100"><img src="/img/icon-arrow-right.svg"></span>
+                  </a>
+                </h5>
+                <div class="js-collapse custom-accordion" id="footer-nav-1">
+                    <ul class="text-lg font-body text-gray-200">
+                        <li class="mt-4"><a class="hover:text-white" href="/fr/features/">Features</a></li>
+                        <li class="mt-4"><a class="hover:text-white" href="/fr/security/">Sécurité</a></li>
+                        <li class="mt-4"><a class="hover:text-white" href="/fr/get/">Obtenir l'application</a></li>
+                        <li class="mt-4"><a class="hover:text-white" href="/fr/nightly/">Nocturne</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 py-8 lg:pb-0 lg:pt-12">
+                
+                <h5 class="uppercase font-special tracking-widest text-lg text-gray-600">
+                  <a data-toggle="collapse" class="js-collapse-trigger custom-accordion-trigger flex items-center justify-between" href="#footer-nav-2" role="button" aria-expanded="true" aria-controls="footer-nav-2">
+                    Status
+                    <span class="custom-accordion-arrow transform transition-all -rotate-90 duration-200 linear lg:hidden ml-4 text-gray-100"><img src="/img/icon-arrow-right.svg"></span>
+                  </a>
+                </h5>
+                <div class="js-collapse custom-accordion" id="footer-nav-2">
+                    <ul class="text-lg font-body text-gray-200">
+                        <li class="mt-4"><a href="/fr/get-involved/">S'impliquer</a></li>
+                        <li class="mt-4"><a href="/fr/about/">A propos</a></li>
+                        <li class="mt-4"><a href="http://statusnetwork.com/press-kit/status/" target="_blank">Kit média</a></li>
+                        <li class="mt-4"><a href="https://our.status.im/" target="_blank" rel="noopener">Blog</a></li>
+                        <li class="mt-4"><a href="/files/whitepaper.pdf" target="_blank">Livre blanc</a></li>
+                        <li class="mt-4"><a href="https://analytics.status.im/" target="_blank">Analytics</a></li>
+                        <li class="mt-4"><a href="/our_team/open_positions.html" target="_blank">Open Positions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 py-8 lg:pb-0 lg:pt-12">
+                
+                <h5 class="uppercase font-special tracking-widest text-lg text-gray-600">
+                  <a data-toggle="collapse" class="js-collapse-trigger custom-accordion-trigger flex items-center justify-between" href="#footer-nav-3" role="button" aria-expanded="true" aria-controls="footer-nav-3">
+                    Documentation
+                    <span class="custom-accordion-arrow transform transition-all -rotate-90 duration-200 linear lg:hidden ml-4 text-gray-100"><img src="/img/icon-arrow-right.svg"></span>
+                  </a>
+                </h5>
+                <div class="js-collapse custom-accordion" id="footer-nav-3">
+                    <ul class="text-lg font-body text-gray-200">
+                        <li class="mt-4"><a href="/fr/docs/">Développeurs</a></li>
+                        <li class="mt-4"><a href="/fr/developer_tools/">Intégration de la DApp</a></li>
+                        <li class="mt-4"><a href="/fr/technical/">Guide du contributeur</a></li>
+                        <li class="mt-4"><a href="https://tutorials.statusnetwork.com/" target="_blank" rel="noopener">Tutoriels</a></li>
+                        <li class="mt-4"><a href="https://specs.status.im/" target="_blank" rel="noopener">Spécifications</a></li>
+                        <li class="mt-4"><a href="/fr/faq/">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 py-8 lg:pb-0 lg:pt-12">
+                
+                <h5 class="uppercase font-special tracking-widest text-lg text-gray-600">
+                  <div class="lg:flex lg:items-center">
+                      <a data-toggle="collapse" class="js-collapse-trigger custom-accordion-trigger flex items-center justify-between" href="#footer-nav-4" role="button" aria-expanded="true" aria-controls="footer-nav-4">
+                          Réseau Status
+                          <span class="custom-accordion-arrow transform transition-all -rotate-90 duration-200 linear lg:hidden ml-4 text-gray-100"><img src="/img/icon-arrow-right.svg"></span>
+                      </a>
+                      <a href="https://statusnetwork.com/" target="_blank" class="hidden lg:block ml-4 flex-shrink-0 -mt-2"><img src="/img/footer-status-network-logo.svg"></a>
+                    </div>
+                </h5>
+                <div class="js-collapse custom-accordion" id="footer-nav-4">
+                    <ul class="text-lg font-body text-gray-200">
+                        <li class="mt-4"><a href="https://keycard.tech/" target="_blank">Keycard</a></li>
+                        <li class="mt-4"><a href="https://assemble.fund/" target="_blank">Assembler</a></li>
+                        <li class="mt-4"><a href="https://embark.status.im/" target="_blank">Embarquer</a></li>
+                        <li class="mt-4"><a href="https://subspace.status.im/" target="_blank">Subspace</a></li>
+                        <li class="mt-4"><a href="https://vac.dev/" target="_blank">Vac</a></li>
+                        <li class="mt-4"><a href="https://nimbus.team/" target="_blank">Nimbus</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-20 mt-16 lg:mt-40">
+            <h5 class="font-special uppercase tracking-widest text-lg">Connectez-vous</h5>
+            <ul class="flex flex-wrap items-center -ml-8 mt-4">
+                <li class="ml-8 mt-8">
+                    <a href="https://join.status.im/chat/public/status" target="_blank">
+                       <img src="/img/status-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://discord.gg/3Exux7Y" target="_blank">
+                        <img src="/img/discord-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://www.facebook.com/ethstatus" target="_blank">
+                        <img src="/img/facebook-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://twitter.com/ethstatus" target="_blank">
+                        <img src="/img/twitter-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://discuss.status.im/" target="_blank">
+                        <img src="/img/discuss-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://github.com/status-im" target="_blank">
+                        <img src="/img/github-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://www.reddit.com/r/statusim/" target="_blank">
+                        <img src="/img/reddit-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://www.youtube.com/statusim" target="_blank">
+                        <img src="/img/youtube-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://www.instagram.com/status.im/" target="_blank">
+                        <img src="/img/instagram-footer-logo.svg">
+                    </a>
+                </li>
+                <li class="ml-8 mt-8">
+                    <a class="hover:text-white" href="https://weibo.com/u/3928626105" target="_blank">
+                        <img src="/img/weibo-footer-logo.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-screen-2xl mx-auto px-8 lg:px-20 text-lg mt-24 lg:mt-40">
+        <div class="flex flex-col lg:flex-row lg:justify-between text-gray-400 font-body">
+            <div>
+                <div class="flex items-center">
+                    <a href="/fr/privacy-policy/">Politique de confidentialité</a>
+                    <a href="https://our.status.im/implementing-fathom-analytics-on-marketing-websites/" target="_blank" rel="noopener" class="ml-24">Analyse du site</a>
+                </div>
+                <p class="text-gray-600 mt-4">Status Research & Development GmbH, Baarerstrasse 10, Zug, Suisse</p>
+            </div>
+            <p class="mt-8 lg:mt-0">
+                <a href="https://messari.io/asset/status/" target="_blank" class="flex items-center">
+                    Transparence de Messari vérifiée 
+                    <svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-4">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.619 6.78163L16.354 0.130678C16.7424 -0.04464 17.1887 -0.0435034 17.5762 0.133791L32.0108 6.73815C32.4435 6.93613 32.7519 7.33018 32.8377 7.79455C34.0223 14.2086 33.5242 20.161 31.3434 25.6518C29.0785 31.3543 24.3727 35.4913 17.226 38.0626C9.87383 36.2554 4.90753 31.9102 2.32714 25.0269C-0.145514 18.431 -0.647719 12.6534 0.82053 7.69391C0.940286 7.2894 1.2317 6.95644 1.619 6.78163ZM20.1354 10.4413L16.0844 14.5553L14.5369 13.0577C14.1926 12.7246 13.6316 12.7218 13.2837 13.0515C12.9359 13.3813 12.933 13.9187 13.2773 14.2519L15.47 16.3738C15.8226 16.7151 16.4004 16.7084 16.7444 16.3591L21.4247 11.606C21.7605 11.265 21.7441 10.7278 21.3881 10.4062C21.032 10.0845 20.4712 10.1002 20.1354 10.4413ZM23.432 15.4245C23.432 15.3277 23.393 15.2349 23.3236 15.1667C23.1799 15.0257 22.9479 15.0267 22.8055 15.1691L20.0205 17.9523C19.9525 18.0203 19.9144 18.1121 19.9144 18.2077V26.9774C19.9144 27.0655 19.9467 27.1506 20.0054 27.2167C20.1388 27.3674 20.3703 27.3823 20.5223 27.2501L23.3073 24.8297C23.3866 24.7608 23.432 24.6614 23.432 24.5569V15.4245ZM16.9686 20.9306C16.8355 21.0433 16.6405 21.0469 16.5032 20.9392L15.6375 20.2602C15.5728 20.2094 15.4927 20.1818 15.4101 20.1818C15.2078 20.1818 15.0438 20.3442 15.0438 20.5446V26.9781C15.0438 27.0666 15.0764 27.152 15.1355 27.2183C15.2694 27.3685 15.5009 27.3827 15.6525 27.2501L18.4375 24.815C18.5163 24.7461 18.5614 24.647 18.5614 24.543V20.3701C18.5614 20.2837 18.5303 20.2001 18.4736 20.1344C18.3422 19.982 18.111 19.964 17.9571 20.0942L16.9686 20.9306ZM10.4437 15.4237V26.9822C10.4437 27.1826 10.6078 27.345 10.8101 27.345C10.8943 27.345 10.976 27.3163 11.0414 27.2636L13.8264 25.0175C13.9118 24.9486 13.9614 24.8452 13.9614 24.7361V18.19C13.9614 18.0939 13.923 18.0018 13.8545 17.9338L11.0695 15.1675C10.9266 15.0256 10.6947 15.0253 10.5514 15.1668C10.4825 15.2349 10.4437 15.3273 10.4437 15.4237Z" fill="#808080"/>
+                    </svg>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+        
+    </div>
+
+    <!-- 3rd party scripts -->
+    <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="/js/main.min.js"></script>
+
+    <script>
+        /* This POSTs to the clicks-api service to click numbers of downloads of different releases */
+        $(document).ready(function () {
+          $('a.app-download').click(function (ev) {
+            let downloadType = $(this).closest('a').attr('id')
+            $.post(`https://clicks.status.im/clicks/${downloadType}`)
+          });
+        });
+    </script>
+    <script>
+        /* Fathom - simple website analytics - https://github.com/usefathom/fathom */
+        (function(f, a, t, h, o, m){
+          a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+          };
+          o=f.createElement('script'),
+          m=f.getElementsByTagName('script')[0];
+          o.async=1; o.src=t; o.id='fathom-script';
+          m.parentNode.insertBefore(o,m)
+        })(document, window, '//fathom.status.im/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'BMGJI');
+        fathom('trackPageview');
+    </script>
+</body>
+</html>
